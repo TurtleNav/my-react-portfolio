@@ -6,17 +6,41 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
+#header-content {
+  display: flex;
+}
+
+nav {
+  flex-grow: 1;
+}
+
 body {
   background-color: darkgreen;
 }
 
 .nav-tabs {
+  align-items: center;
+  background-color: rgb(107, 150, 34);
+  border-radius: 40px;
   display: flex;
+  flex-grow: 1;
+  height: 100px;
   justify-content: space-around;
+  list-style-type: none;
+  margin-top: 10px;
+
+}
+a:visited, a:link {
+  color: white;
 }
 
+/* Parent div of links in header */
 nav-item {
   flex-wrap: wrap;
+}
+
+a:hover:after {
+  content: '🍃';
 }
 
 h1 {
