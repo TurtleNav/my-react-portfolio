@@ -1,3 +1,4 @@
+// All the navbar functionality is contained in this file
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     <header>
