@@ -1,6 +1,8 @@
 import { useState } from 'react';
-// TODO: Implement these commented out pages
+
+// Pages imports
 import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
 import AboutMe from './pages/AboutMe';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
@@ -12,6 +14,9 @@ export default function PortfolioContainer() {
   const renderPage = () => {
     if (currentPage === 'Home') {
       return <Home />;
+    }
+    if (currentPage === 'Portfolio') {
+      return <Portfolio />;
     }
     if (currentPage === 'AboutMe') {
       return <AboutMe />;
