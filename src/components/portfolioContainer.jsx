@@ -31,7 +31,6 @@ export default function PortfolioContainer() {
 
   return (
     <div id="header-content">
-      <h1>Luc Tourangeau</h1>
       <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
       <main className="mx-3">{renderPage()}</main>
     </div>

@@ -6,9 +6,6 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
-#header-content {
-  display: flex;
-}
 
 nav {
   flex-grow: 1;
@@ -41,6 +38,10 @@ nav-item {
 
 a:hover:after {
   content: '🍃';
+}
+
+header {
+  display: flex;
 }
 
 h1 {
