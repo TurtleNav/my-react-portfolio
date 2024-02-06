@@ -3,7 +3,7 @@ import { useState } from "react";
 const imgWidth = 100;
 const imgHeight = 100;
 
-function ProjectCard(name, url, img) {
+function ProjectCard({name, url, img}) {
   return (
     <div className="project-card" id={name}>
       <div>
@@ -18,9 +18,10 @@ function ProjectCard(name, url, img) {
 export default function Portfolio() {
   return (
     <div>
-      <p>
-        lorem ipsum
-      </p>
+      <h2>Portfolio</h2>
+      <div id="card-container">
+        <ProjectCard name="my-react-portfolio" url="https://github.com/TurtleNav/my-react-portfolio" img="../../assets/react.svg"/>
+      </div>
     </div>
   );
 }
