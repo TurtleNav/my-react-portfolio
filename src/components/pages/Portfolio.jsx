@@ -1,7 +1,17 @@
 import { useState } from "react";
 
+// TODO: Refactor to css at some point
 const imgWidth = 100;
 const imgHeight = 100;
+
+function projectDetails(name, url, img) {
+  return {name, url, img};
+};
+
+const projects = [
+  projectDetails("my-react-portfolio", "https://github.com/TurtleNav/my-react-portfolio", )
+]
+
 
 function ProjectCard({name, url, img}) {
   return (
