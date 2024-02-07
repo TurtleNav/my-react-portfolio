@@ -3,7 +3,7 @@ dist
 dist-ssr
 *.local
 02-Challenge
-
+test*
 logs
 *.log
 npm-debug.log*

@@ -7,12 +7,13 @@ function NavTabs({ currentPage, handlePageChange }) {
         <ul className="nav nav-tabs">
           <li className="nav-item">
             <a
-            href="#portfolio"
+            href="#portfolio" id="portfolio-link"
             onClick={() => handlePageChange('Portfolio')}
             className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
             >
             Portfolio
             </a>
+            <div id="leaf-container-1"></div>
           </li>
           <li className="nav-item">
             <a
