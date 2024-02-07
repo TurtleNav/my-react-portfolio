@@ -17,6 +17,8 @@ import {useState} from 'react';
 
 */
 
+//function sanitizeSpaces
+
 
 export default function Contact(props) {
   
@@ -33,7 +35,16 @@ export default function Contact(props) {
 
   return (
     <div>
-      <form className='contact-form' onSubmit={handleSubmit}>
+      <form
+        /*
+          I will only respond to emails sent with the subject field as below:
+            Portfolio Contact Form
+        */
+        action={`mailto:tourangeauluc0@gmail.com?subject=Portfolio%20Contact%20Form&body=${message}`}
+        method="post"
+        encType="text/plain"
+        className='contact-form'
+        >
         <label htmlFor="name">Name:</label>
         <input
           type="text"
