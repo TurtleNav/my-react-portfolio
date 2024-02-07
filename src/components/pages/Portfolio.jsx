@@ -19,7 +19,7 @@ const projects = [
 function ProjectCard({name, url}) {
   return (
     <div className="project-card" id={name}>
-        <a href={url}></a>
+        <a href={url}>{name}</a>
     </div>
   );
 }
