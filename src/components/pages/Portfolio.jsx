@@ -29,10 +29,12 @@ export default function Portfolio() {
     <div>
       <h2>Portfolio</h2>
       {/*Map through all projects. React will pester us about using a key so we appease it with a not-so-great key: the index of the project in the original array*/}
-      {projects.map(({name, url}, index) => (
-        <ProjectCard key={index} name={name} url={url}></ProjectCard>
-      ))
-      }
+      <div id="project-card-container">
+        {projects.map(({name, url}, index) => (
+          <ProjectCard key={index} name={name} url={url}></ProjectCard>
+        ))
+        }
+      </div>
     </div>
   );
 }

@@ -33,6 +33,32 @@ a:visited, a:link {
   color: white;
 }
 
+#project-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.project-card {
+  background-color: wheat;
+  box-sizing: border-box;
+
+  border-radius: 5vw;
+  box-shadow: 10px 5px 5px orangered;
+
+
+  color:#5d0cff;
+  /*flex: 0, 0, 50%;*/
+  padding: 10vw;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 30vw;
+  height: 30vw;
+}
+
 a#portfolio-link:active {
   #leaf-container-1 {
     background-image: url("./assets/Leaf_icon_03.svg");
