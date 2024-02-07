@@ -30,20 +30,31 @@ export default function Contact(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("hey you submitted! ", name);
+    // mock email
+    console.log(
+      `This is a mock email submitted by: ${name}\nwith email: ${email}\nand body: ${message}`
+    );
+
+    // clear state
+    setName('');
+    setEmail('');
+    setMessage('')
+    
   }
 
   return (
     <div>
       <form
         /*
-          I will only respond to emails sent with the subject field as below:
-            Portfolio Contact Form
-        */
-        action={`mailto:tourangeauluc0@gmail.com?subject=Portfolio%20Contact%20Form&body=${message}`}
+          Commenting out mailto link due to spam risks. Ideally, a server side
+          script will handle contacting me but that feature is TBD
+
+        action={`mailto:{EMAIL HERE}?subject=Portfolio%20Contact%20Form&body=${message}`}
         method="post"
         encType="text/plain"
+        */
         className='contact-form'
+        onSubmit={handleSubmit}
         >
         <label htmlFor="name">Name:</label>
         <input
