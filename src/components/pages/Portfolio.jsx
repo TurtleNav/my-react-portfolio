@@ -1,20 +1,18 @@
 import { useState } from "react";
 
-// TODO: Refactor to css at some point
-const imgWidth = 100;
-const imgHeight = 100;
-
 function projectDetails(name, url) {
   return {name, url};
 }
 
+// My 6 projects to be in in this portfolio. Styling in App.css will render these as three rows of 2 projects
 const projects = [
   projectDetails("my-react-portfolio", "https://github.com/TurtleNav/my-react-portfolio"),
   projectDetails("Healthy Living Recipe Creator", "https://github.com/TurtleNav/group2-recipe-app"),
   projectDetails("My Tech Blog", "https://github.com/TurtleNav/my-tech-blog"),
-  projectDetails("My Weather Dashboard", "https://github.com/TurtleNav/my-weather-dashboard")
-]
-
+  projectDetails("My Weather Dashboard", "https://github.com/TurtleNav/my-weather-dashboard"),
+  projectDetails("My Social Network", "https://github.com/TurtleNav/my-social-network-api"),
+  projectDetails("My Web Text Editor", "https://github.com/TurtleNav/web-text-editor")
+];
 
 function ProjectCard({name, url}) {
   return (
