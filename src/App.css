@@ -112,8 +112,12 @@ a.nav-link:hover:after {
 }
 
 div:has(> .resume-header) {
-  /*text-align: center;*/
+  text-align: center;
 
+  a {
+    text-align: center;
+    font-size: 24pt;
+  }
 }
 
 .skills {
@@ -129,7 +133,7 @@ div:has(> .resume-header) {
   padding: 10vw;
   width: 80vw;
   height: 200px;
-  background-color: darkslategray;
+  background-color: seagreen;
   border-radius: 10vw;
 }
 
