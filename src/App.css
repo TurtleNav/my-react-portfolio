@@ -6,16 +6,10 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
+/* --------------------- Header -------------------------- */
+
 header {
-  background-color: rgb(107, 150, 34);
-}
-
-nav {
-  flex-grow: 1;
-}
-
-body {
-  background-color: darkgreen;
+  background-color: seagreen;
 }
 
 .nav-tabs {
@@ -29,6 +23,38 @@ body {
   margin-top: 10px;
 
 }
+
+nav {
+  flex-grow: 1;
+}
+
+/* Parent div of links in header */
+nav-item {
+  flex-wrap: wrap;
+}
+
+/* At ~720px wide, the nav buttons will begin overlapping */
+@media (max-width: 720px) {
+  /*
+  Drop the nav tabs below my name and then center my name since
+  it no longer has tabs to its right
+  */
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header h1 {
+    text-align: center;
+  }
+}
+
+/* ------------------------------------------------------- */
+
+body {
+  background-color: darkgreen;
+}
+
+
 a:visited, a:link {
   color: white;
 }
@@ -62,46 +88,6 @@ a:visited, a:link {
   }
 }
 
-a#portfolio-link:active {
-  #leaf-container-1 {
-    background-image: url("./assets/Leaf_icon_03.svg");
-    /*
-    position: relative;
-    -webkit-animation: fallingLeaf 2s normal ease-out;
-    animation: fallingLeaf 2s normal ease-out;
-    */
-  }
-}
-
-@-webkit-keyframes fallingLeaf {
-  0% {
-    top: 0px;
-  }
-  100% {
-    top: 500px;
-  }
-}
-
-@keyframes fallingLeaf {
-  0% {
-    top: 0px;
-  }
-  100% {
-    top: 500px;
-  }
-}
-
-
-/* Parent div of links in header */
-nav-item {
-  flex-wrap: wrap;
-}
-
-/*
-a.nav-link:hover:after {
-  content: '🍃';
-}
-*/
 
 
 /* ----------------- Resume.jsx --------------------- */

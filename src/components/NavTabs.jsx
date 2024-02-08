@@ -13,7 +13,6 @@ function NavTabs({ currentPage, handlePageChange }) {
             >
             Portfolio
             </a>
-            <div id="leaf-container-1"></div>
           </li>
           <li className="nav-item">
             <a
