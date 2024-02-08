@@ -6,11 +6,12 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
-/* --------------------- Header -------------------------- */
-
-header {
+/* --------------- Shared Properties --------------------- */
+header, footer, .skill-card {
   background-color: seagreen;
 }
+
+/* --------------------- Header -------------------------- */
 
 .nav-tabs {
   align-items: center;
@@ -49,10 +50,10 @@ nav-item {
 }
 
 /* ------------------------------------------------------- */
+/* ----------------------- footer ------------------------ */
 
 footer {
   align-items: center;
-  background-color: seagreen;
   display: flex;
   justify-content: center;
   padding-top: 10px;
@@ -61,6 +62,8 @@ footer {
 div.footer-icon a {
   padding-left: 10px;
 }
+
+/* ------------------------------------------------------- */
 
 body {
   background-color: darkgreen;
@@ -131,7 +134,6 @@ div:has(> .resume-header) {
   padding: 10vw;
   width: 80vw;
   height: 200px;
-  background-color: seagreen;
   border-radius: 10vw;
 }
 
@@ -150,118 +152,9 @@ a bump up in all but the smallest screens (<480px wide)
 }
 
 /* -------------------------------------------------- */
-header {
-  display: flex;
-}
 
 h1 {
   margin: 32px 0;
   color: #fff;
   font-size: 24px;
 }
-
-h3 {
-  margin: auto;
-  color: rgb(66, 171, 231);
-  font-size: 20px;
-}
-
-.complete {
-  text-decoration: line-through;
-  opacity: 0.4;
-}
-
-.low {
-  background: linear-gradient(
-    90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
-  );
-}
-
-.medium {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 12, 241, 1) 0%,
-    rgba(250, 0, 135, 1) 100%
-  );
-}
-
-.high {
-  background: linear-gradient(
-    90deg,
-    rgba(20, 159, 255, 1) 0%,
-    rgba(17, 122, 255, 1) 100%
-  );
-}
-
-.icons {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.delete-icon {
-  margin-right: 5px;
-  color: #fff;
-}
-
-.edit-icon {
-  color: #fff;
-}
-
-/* Dropdown menu */
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: #ec5700;
-  border-radius: 4px;
-  color: white;
-  padding: 16px;
-  margin: 10px;
-  /* font-size: 16px; */
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 215px;
-  border-radius: 4px;
-  padding: 16px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content p {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content p:hover {
-  background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #5d0cff;
-}
-
