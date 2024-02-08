@@ -49,3 +49,31 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router}/>
 )
 ```
+
+```jsx
+/* App.jsx */
+import './App.css';
+import { Outlet } from 'react-router-dom';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <div className="my-react-portfolio">
+      <div id="content">
+        <Header/>
+        <main>
+          <Outlet/>
+        </main>
+        <Footer />
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```
+
+While there may be significant boiler plate above, the price of adding a new route is less than Express.js.
+
