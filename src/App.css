@@ -4,6 +4,7 @@
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+  
 }
 
 h1 {
@@ -70,6 +71,17 @@ div.footer-icon a {
 }
 
 /* ------------------------------------------------------- */
+/* -------------------- About Me ------------------------- */
+
+p.about-me-text {
+  color: rgb(17, 34, 17);
+  font-size: 16pt;
+  max-width: 60vw;
+  text-align: justify;
+}
+
+
+/* ------------------------------------------------------- */
 
 body {
   background-color: darkgreen;
@@ -126,6 +138,7 @@ form.contact-form label {
 }
 form.contact-form input {
   height: 50px;
+  font-size: 16pt;
 }
 
 input.contact-message-input {
@@ -137,9 +150,6 @@ span.feedback-span {
   font-size: 18pt;
 }
 
-input.submit-btn {
-  flex-grow: 0.1;
-}
 
 /* --------------------------------------------------- */
 

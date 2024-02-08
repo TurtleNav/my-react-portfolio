@@ -21,7 +21,7 @@ export default function Contact(props) {
   }
 
   return (
-    <div>
+    <div style={{paddingLeft: "20px"}}>
       <form
         /*
           Commenting out mailto link due to spam risks. Ideally, a server side
@@ -93,7 +93,7 @@ export default function Contact(props) {
           }}
         ></input>
 
-        <input className="submit-btn" type="submit" value="Submit" width={50}></input>
+        <input className="submit-btn" type="submit" value="Submit" style={{fontSize: "16pt"}} ></input>
       </form>
 
       {/* Feedback */}

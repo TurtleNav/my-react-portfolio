@@ -23,7 +23,7 @@ function Project({name, url}) {
 export default function Portfolio() {
   return (
     <div>
-      <h2>Portfolio</h2>
+      <h1>Portfolio</h1>
       {/*Map through all projects. React will pester us about using a key so we appease it with a not-so-great key: the index of the project in the original array*/}
       <div id="project-card-container">
         {projects.map(({name, url}, index) => (
