@@ -104,6 +104,50 @@ a.nav-link:hover:after {
 */
 
 
+/* ----------------- Resume.jsx --------------------- */
+
+.resume-header {
+  text-align: center;
+  color: white;
+}
+
+div:has(> .resume-header) {
+  /*text-align: center;*/
+
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-card {
+  color: white;
+  font-size: 16pt;
+  flex: 1;
+  margin: 10vw;
+  padding: 10vw;
+  width: 80vw;
+  height: 200px;
+  background-color: darkslategray;
+  border-radius: 10vw;
+}
+
+/* Do some media queries for mobile-first design */
+
+/*
+16pt font + some wiggle room is just big enough for a
+small mobile device and hence is the default. Give
+a bump up in all but the smallest screens (<480px wide)
+*/
+
+@media (min-width: 480px) {
+  .skill-card {
+    font-size: 24pt;
+  }
+}
+
+/* -------------------------------------------------- */
 header {
   display: flex;
 }
