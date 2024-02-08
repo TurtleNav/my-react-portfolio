@@ -50,6 +50,10 @@ nav-item {
 
 /* ------------------------------------------------------- */
 
+footer {
+  background-color: seagreen;
+}
+
 body {
   background-color: darkgreen;
 }
