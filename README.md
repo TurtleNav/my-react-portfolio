@@ -77,3 +77,46 @@ export default App;
 
 While there may be significant boiler plate above, the price of adding a new route is less than Express.js.
 
+### Form Handling + State Variables
+
+In the 'Contact Me' setion of my webpage there is a form to get in touch with myself. The user must
+input their name, email, and a message. All three of these variables are tracked using React's `useState`
+hook. The form inputs are also validated in an appropriate manner. Take the name input for example:
+
+```jsx
+/* Contact.jsx */
+let [name, setName] = useState(''); // Getter and setter for name input
+<form ... >
+  <label htmlFor="name">Name:</label>
+  <input
+    type="text"
+    value={name}
+    name="name"
+    className="contact-name-input"
+    onChange={(e) => {
+      setName(e.target.value);
+    }}
+    onBlur={((e) => {
+      // event emits whenever the name input was selected then a new element was selected
+
+      // This span tag is used to provide feedback on the validity of the input
+      const el = document.querySelector('.feedback-span');
+
+      if (name.replace(/[a-zA-Z]/g, "").length > 0) {
+        el.textContent = "A valid name is required";
+      } else {
+        el.textContent = "";
+      }
+    })}
+  ></input>
+```
+
+
+
+
+
+
+
+
+
+
