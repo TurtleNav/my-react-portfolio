@@ -1,10 +1,19 @@
 import './App.css';
-import PortfolioContainer from './components/portfolioContainer';
+import { Outlet } from 'react-router-dom';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="my-react-portfolio">
-      <PortfolioContainer />
+      <div id="content">
+        <Header/>
+        <main>
+          <Outlet/>
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

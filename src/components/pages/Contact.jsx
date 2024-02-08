@@ -45,12 +45,11 @@ export default function Contact(props) {
           }}
           onBlur={((e) => {
             const el = document.querySelector('.feedback-span');
-            const prevFeedback = el.textContent;
 
             if (name.replace(/[a-zA-Z]/g, "").length > 0) {
               el.textContent = "A valid name is required";
             } else {
-              el.textContent = prevFeedback;
+              el.textContent = "";
             }
           })}
         ></input>
@@ -64,12 +63,12 @@ export default function Contact(props) {
           onChange={(e) => setEmail(e.target.value)}
           onBlur={(e) => {
             const el = document.querySelector('.feedback-span');
-            const prevFeedback = el.textContent;
             // "simple" email regex
             if (!email.match(/^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$/g)) {
               el.textContent = "A valid email is required";
+              console.log("email is invalid")
             } else {
-              el.textContent = prevFeedback;
+              el.textContent = "";
             }
           }}
         ></input>
@@ -83,12 +82,11 @@ export default function Contact(props) {
           onChange={(e) => setMessage(e.target.value)}
           onBlur={(e) => {
             const el = document.querySelector('.feedback-span');
-            const prevFeedback = el.textContent;
 
             if (message.length === 0) {
               el.textContent = "A message is required";
             } else {
-              el.textContent = prevFeedback;
+              el.textContent = "";
             }
           }}
         ></input>

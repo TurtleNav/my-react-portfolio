@@ -13,12 +13,27 @@ h1 {
   font-size: 24px;
 }
 
+/* Used to push footer to the bottom of the page */
+#content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, main {
+  flex: 1;
+}
+
 /* --------------- Shared Properties --------------------- */
 header, footer, .skill-card {
   background-color: seagreen;
 }
 
 /* --------------------- Header -------------------------- */
+
+header {
+  max-height: 200px;
+}
 
 .nav-tabs {
   align-items: center;
@@ -76,8 +91,23 @@ div.footer-icon a {
 p.about-me-text {
   color: rgb(17, 34, 17);
   font-size: 16pt;
-  max-width: 60vw;
   text-align: justify;
+  padding-right: 20px;
+}
+
+/*
+About-Me paragraphs are kept on the left 60% of the screen when the screen is large
+*/
+@media (min-width: 720px) {
+  p.about-me-text {
+    max-width: 60vw;
+  }
+}
+
+ul.about-me-text {
+  color: rgb(17, 34, 17);
+  font-size: 16pt;
+  padding-left: 20px;
 }
 
 

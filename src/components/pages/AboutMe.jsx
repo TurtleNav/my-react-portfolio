@@ -21,15 +21,13 @@ export default function AboutMe() {
         abstracted robot motion opcodes into more user-friendly commands such
         as "drive straight". This project taught me about:
       </p>
-        <br></br>
-      <p className="about-me-text">
-        <ul style={{paddingLeft: "20px"}}>
-          <li>low-level programming (for serial interface with robot)</li>
-          <li>networking (for remote communication with the computer controlling the robot)</li>
-          <li>API construction</li>
-          <li>Databases (for storing robot data)</li>
-        </ul>
-      </p>
+      <br></br>
+      <ul className="about-me-text">
+        <li>low-level programming (for serial interface with robot)</li>
+        <li>networking (for remote communication with the computer controlling the robot)</li>
+        <li>API construction</li>
+        <li>Databases (for storing robot data)</li>
+      </ul>
     </div>
   );
 }

@@ -1,45 +1,23 @@
+import {Link} from 'react-router-dom';
+
 // All the navbar functionality is contained in this file
-function Header({ currentPage, handlePageChange }) {
+function Header() {
   return (
     <header>
       <h1>Luc Tourangeau</h1>
       <nav>
         <ul className="nav nav-tabs">
           <li className="nav-item">
-            <a
-            href="#portfolio" id="portfolio-link"
-            onClick={() => handlePageChange('Portfolio')}
-            className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
-            >
-            Portfolio
-            </a>
+            <Link to="Portfolio">Portfolio</Link>
           </li>
           <li className="nav-item">
-            <a
-            href="#about"
-            onClick={() => handlePageChange('AboutMe')}
-            className={currentPage === 'AboutMe' ? 'nav-link active' : 'nav-link'}
-            >
-              About Me
-            </a>
+            <Link to="AboutMe">About Me</Link>
           </li>
           <li className="nav-item">
-            <a
-            href="#contact"
-            onClick={() => handlePageChange('Contact')}
-            className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
-            >
-              Contact
-            </a>
+            <Link to="Contact">Contact</Link>
           </li>
           <li className="nav-item">
-            <a
-            href="#resume"
-            onClick={() => handlePageChange('Resume')}
-            className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
-            >
-              Resume
-            </a>
+            <Link to="Resume">Resume</Link>
           </li>
         </ul>
       </nav>
@@ -49,4 +27,3 @@ function Header({ currentPage, handlePageChange }) {
 }
 
 export default Header;
-
