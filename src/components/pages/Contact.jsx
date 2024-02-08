@@ -1,28 +1,6 @@
 import {useState} from 'react';
 
-// Contact (header)
-// Name (input)
-// Email(input)
-// Message (input)
-// Submit (button)
-
-// Span used to provide feedback such as: 'message is required', 'email is invalid', 'name is required'
-
-
-/*
-  Gonna look something like this:
-
-  <div>
-    <form className="contact-form" onSubmit={}
-
-*/
-
-//function sanitizeSpaces
-
-
 export default function Contact(props) {
-  
-  // Our three state variables: 'name', 'email', and 'message'
   let [name, setName] = useState('');
   let [email, setEmail] = useState('');
   let [message, setMessage] = useState('');
@@ -62,7 +40,19 @@ export default function Contact(props) {
           value={name}
           name="name"
           className="contact-name-input"
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
+          onBlur={((e) => {
+            const el = document.querySelector('.feedback-span');
+            const prevFeedback = el.textContent;
+
+            if (name.replace(/[a-zA-Z]/g, "").length > 0) {
+              el.textContent = "A valid name is required";
+            } else {
+              el.textContent = prevFeedback;
+            }
+          })}
         ></input>
 
         <label htmlFor="email">Email:</label>
@@ -72,6 +62,16 @@ export default function Contact(props) {
           name="email"
           className="contact-email-input"
           onChange={(e) => setEmail(e.target.value)}
+          onBlur={(e) => {
+            const el = document.querySelector('.feedback-span');
+            const prevFeedback = el.textContent;
+            // "simple" email regex
+            if (!email.match(/^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$/g)) {
+              el.textContent = "A valid email is required";
+            } else {
+              el.textContent = prevFeedback;
+            }
+          }}
         ></input>
 
         <label htmlFor="message">Message:</label>
@@ -81,28 +81,23 @@ export default function Contact(props) {
           name="message"
           className="contact-message-input"
           onChange={(e) => setMessage(e.target.value)}
+          onBlur={(e) => {
+            const el = document.querySelector('.feedback-span');
+            const prevFeedback = el.textContent;
+
+            if (message.length === 0) {
+              el.textContent = "A message is required";
+            } else {
+              el.textContent = prevFeedback;
+            }
+          }}
         ></input>
 
         <input type="submit" value="Submit"></input>
-  
       </form>
+
+      {/* Feedback */}
+      <span className='feedback-span'></span>
     </div>
   )
-
-
-
 }
-
-
-/*
-export default function Contact() {
-  return (
-    <div>
-      <h1>Contact Me</h1>
-      <p>
-        hellooooo
-      </p>
-    </div>
-  );
-}
-*/
