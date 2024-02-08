@@ -1,7 +1,43 @@
+
 export default function Resume() {
   return (
     <div>
-      <h1>My Resume</h1>
+      <div>
+        <h1>My Resume and other skills</h1>
+        <a href='/src/assets/resume.pdf' target="_blank" type="application/pdf">Download my resume</a>
+      </div>
+
+      <div className="skill-card">
+        <h2>Programming Languages</h2>
+        <ul>
+          <li>C</li>
+          <li>Golang</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+        </ul>
+      </div>
+
+      <div className="skill-card">
+        <h2>Web Technologies</h2>
+        <ul>
+          <li>Apollo</li>
+          <li>Express.js</li>
+          <li>GraphQL</li>
+          <li>Node.js</li>
+          <li>React</li>
+        </ul>
+      </div>
+
+      <div className="skill-card">
+        <h2>Database Technologies</h2>
+        <ul>
+          <li>MongoDB</li>
+          <li>MySQL</li>
+          <li>SQLite</li>
+        </ul>
+      </div>
     </div>
+
+
   );
 }
