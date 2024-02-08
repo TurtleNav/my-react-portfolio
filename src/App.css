@@ -51,7 +51,15 @@ nav-item {
 /* ------------------------------------------------------- */
 
 footer {
+  align-items: center;
   background-color: seagreen;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+div.footer-icon a {
+  padding-left: 10px;
 }
 
 body {
