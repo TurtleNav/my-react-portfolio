@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function projectDetails(name, url) {
   return {name, url};
 }
@@ -14,7 +12,7 @@ const projects = [
   projectDetails("My Web Text Editor", "https://github.com/TurtleNav/web-text-editor")
 ];
 
-function ProjectCard({name, url}) {
+function Project({name, url}) {
   return (
     <div className="project-card" id={name}>
       <a href={url}>{name}</a>
@@ -29,7 +27,7 @@ export default function Portfolio() {
       {/*Map through all projects. React will pester us about using a key so we appease it with a not-so-great key: the index of the project in the original array*/}
       <div id="project-card-container">
         {projects.map(({name, url}, index) => (
-          <ProjectCard key={index} name={name} url={url}></ProjectCard>
+          <Project key={index} name={name} url={url}></Project>
         ))
         }
       </div>

@@ -1,5 +1,5 @@
 // All the navbar functionality is contained in this file
-function NavTabs({ currentPage, handlePageChange }) {
+function Header({ currentPage, handlePageChange }) {
   return (
     <header>
       <h1>Luc Tourangeau</h1>
@@ -48,5 +48,5 @@ function NavTabs({ currentPage, handlePageChange }) {
   );
 }
 
-export default NavTabs;
+export default Header;
 
