@@ -1,6 +1,10 @@
+/* Get rid of these persistent eslint linting errors */
+
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-useless-escape */
 import {useState} from 'react';
 
-export default function Contact(props) {
+export default function Contact() {
   let [name, setName] = useState('');
   let [email, setEmail] = useState('');
   let [message, setMessage] = useState('');

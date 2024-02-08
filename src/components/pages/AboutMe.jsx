@@ -19,7 +19,7 @@ export default function AboutMe() {
         Create2 (a glorified Roomba) as the hardware since it was an easily
         programmable and robust robot. In software, I created a python API that
         abstracted robot motion opcodes into more user-friendly commands such
-        as "drive straight". This project taught me about:
+        as &quot;drive straight&quot;. This project taught me about:
       </p>
       <br></br>
       <ul className="about-me-text">
