@@ -93,7 +93,7 @@ export default function Contact(props) {
           }}
         ></input>
 
-        <input type="submit" value="Submit"></input>
+        <input className="submit-btn" type="submit" value="Submit" width={50}></input>
       </form>
 
       {/* Feedback */}

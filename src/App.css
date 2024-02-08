@@ -6,6 +6,12 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
+h1 {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 24px;
+}
+
 /* --------------- Shared Properties --------------------- */
 header, footer, .skill-card {
   background-color: seagreen;
@@ -88,7 +94,6 @@ a:visited, a:link {
   border-radius: 5vw;
   box-shadow: 10px 5px 5px orangered;
   color:#5d0cff;
-  /*flex: 0, 0, 50%;*/
   padding: 10vw;
   margin-top: 200px;
   margin-bottom: 50px;
@@ -96,16 +101,49 @@ a:visited, a:link {
   margin-right: 10vw;
   width: 30vw;
   height: 30vw;
-
-  a {
-    color: black;
-    font-size: 18pt;
-  }
 }
 
+.project-card a {
+  color: orangered;
+  font-size: 18pt;
+  text-wrap: nowrap;
+}
 
+/* ----------------- Contact.jsx --------------------- */
+form.contact-form  {
+  display: flex;
+  flex-direction: column;
+}
 
-/* ----------------- Resume.jsx --------------------- */
+/* All children of contact-form which includes <label>'s and <input>'s*/
+form.contact-form input, label {
+  max-width: 60vw;
+  padding-bottom: 10px;
+}
+
+form.contact-form label {
+  font-size: 16pt;
+}
+form.contact-form input {
+  height: 50px;
+}
+
+input.contact-message-input {
+  height: 200px !important;
+}
+
+span.feedback-span {
+  color: rgb(17, 34, 17);
+  font-size: 18pt;
+}
+
+input.submit-btn {
+  flex-grow: 0.1;
+}
+
+/* --------------------------------------------------- */
+
+/* ------------------ Resume.jsx --------------------- */
 
 .resume-header {
   text-align: center;
@@ -152,9 +190,3 @@ a bump up in all but the smallest screens (<480px wide)
 }
 
 /* -------------------------------------------------- */
-
-h1 {
-  margin: 32px 0;
-  color: #fff;
-  font-size: 24px;
-}
